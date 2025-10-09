@@ -53,7 +53,7 @@ resource "aws_secretsmanager_secret_policy" "example" {
 ```hcl
 module "secret_policy" {
   source = "infrahouse/secret-policy/aws"
-  version = "0.1.0"
+  version = "0.2.0"
 }
 
 resource "aws_secretsmanager_secret_policy" "example" {
@@ -69,7 +69,7 @@ A common use case is managing access to secrets created by RDS instances:
 ```hcl
 module "database_secret_policy" {
   source  = "infrahouse/secret-policy/aws"
-  version = "0.1.0"
+  version = "0.2.0"
 
   readers = concat(
     [
