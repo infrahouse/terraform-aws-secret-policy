@@ -99,9 +99,9 @@ data "aws_iam_policy_document" "permission-policy" {
       test = "StringNotLike"
       values = concat(
         [data.aws_iam_role.caller_role.arn],
-          var.admins == null ? [] : var.admins,
-          var.writers == null ? [] : var.writers,
-          var.readers == null ? [] : var.readers
+        var.admins == null ? [] : var.admins,
+        var.writers == null ? [] : var.writers,
+        var.readers == null ? [] : var.readers
       )
       variable = "aws:PrincipalArn"
     }
