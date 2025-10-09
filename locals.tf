@@ -1,7 +1,7 @@
 locals {
   module_version = "0.2.0"
 
-  list_actions   = [
+  list_actions = [
     "secretsmanager:BatchGetSecretValue",
     "secretsmanager:ListSecrets",
   ]
